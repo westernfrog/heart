@@ -14,31 +14,34 @@ export default function Overview() {
         style={{ backgroundColor: "#d52e3f" }}
       >
         <h1 className="rose lh-1 mb-0">V</h1>
-        <h1 className="text-end display-1 fw-bold mb-0">alentine&apos;s day</h1>
+        <h1 className="text-center display-1 fw-bold mb-0">
+          alentine&apos;s day
+        </h1>
       </div>
       <div className="container-fluid text-dm py-3 text-center">
         <p className="fst-italic">
-          <i class="fa-solid fa-quote-left me-2 fst-italic"></i>i love you more
-          each day, more than words could ever say.
-          <i class="fa-solid fa-quote-right ms-2 fst-italic"></i>
+          <i className="fa-solid fa-quote-left me-2 fst-italic"></i>i love you
+          more each day, more than words could ever say.
+          <i className="fa-solid fa-quote-right ms-2 fst-italic"></i>
         </p>
       </div>
-      <div className="col-10 mx-auto text-center">
+      <div className="col-8 mx-auto text-center">
         <button
           type="button"
-          class="btn btn-white btn-shrink rounded-pill p-5 text-dm fs-7"
+          className="btn btn-sm btn-white btn-shrink rounded p-5 text-dm"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           onClick={handleGeneratePoem}
+          style={{ fontSize: "13px" }}
         >
-          Generate some random poems which you know i made for you, ily!
+          Some random poems which you know i made for you, ily!
         </button>
       </div>
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -46,21 +49,21 @@ export default function Overview() {
           <div className="modal-content text-rubik bg-light border-0 rounded">
             <div className="modal-header border-0">
               <h5 className="modal-title text-rubik" id="ModalLabel">
-                ❤️ Poem for you!
+                Poem for you!
               </h5>
             </div>
             <div className="modal-body py-0 fs-7">
-              <p className="text-dm mb-0">Happy Valentine&apos;s Day</p>
+              <p className="text-dm mb-0">Happy Valentine&apos;s Day ❤️</p>
               <p className="text-dm">558th day</p>
               <textarea
-                class="form-control text-dm border-0 rounded"
+                className="form-control text-dm border-0 rounded p-3"
                 rows="6"
                 value={poem}
                 disabled
                 style={{ boxShadow: "none", resize: "none", fontSize: "13px" }}
               ></textarea>
             </div>
-            <div class="modal-footer border-0">
+            <div className="modal-footer border-0">
               <button
                 type="button"
                 className="btn btn-white btn-sm btn-shrink"
