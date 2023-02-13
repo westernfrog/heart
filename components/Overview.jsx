@@ -15,7 +15,7 @@ export default function Overview() {
       >
         <h1 className="rose lh-1 mb-0 text-center">V</h1>
         <h1 className="text-center display-1 fw-bold mb-0">
-          alentine&apos;s day
+          Valentine&apos;s day
         </h1>
       </div>
       <div className="col-8 mx-auto text-center py-3">
