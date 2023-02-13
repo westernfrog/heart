@@ -13,31 +13,30 @@ export default function Overview() {
         className="container-fluid text-niconne fw-bolder py-3 rounded-bottom"
         style={{ backgroundColor: "#d52e3f" }}
       >
-        <h1 className="rose lh-1 mb-0">V</h1>
+        <h1 className="rose lh-1 mb-0 text-center">V</h1>
         <h1 className="text-center display-1 fw-bold mb-0">
           alentine&apos;s day
         </h1>
       </div>
-      <div className="container-fluid text-dm py-3 text-center">
-        <p className="fst-italic">
-          <i className="fa-solid fa-quote-left me-2 fst-italic"></i>i love you
-          more each day, more than words could ever say.
-          <i className="fa-solid fa-quote-right ms-2 fst-italic"></i>
-        </p>
-      </div>
-      <div className="col-8 mx-auto text-center">
+      <div className="col-8 mx-auto text-center py-3">
         <button
           type="button"
-          className="btn btn-sm btn-white btn-shrink rounded p-5 text-dm"
+          className="btn btn-sm btn-white btn-shrink rounded-pill border border-3 p-5 text-dm fw-bold"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           onClick={handleGeneratePoem}
           style={{ fontSize: "13px" }}
         >
-          Some random poems which you know i made for you, ily!
+          some random poems which you know i made for you, ily!
         </button>
       </div>
-
+      <div className="container-fluid text-dm text-center col-8 mx-auto">
+        <p className="fst-italic fw-bold mb-0">
+          <i className="fa-solid fa-quote-left me-2 fst-italic"></i>i love you
+          more each day, more than words could ever say
+          <i className="fa-solid fa-quote-right ms-2 fst-italic"></i>
+        </p>
+      </div>
       <div
         className="modal fade"
         id="exampleModal"
