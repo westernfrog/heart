@@ -3,10 +3,16 @@ import lovePoems from "./Poems";
 
 export default function Overview() {
   const [poem, setPoem] = useState("");
+  const [heartCount, setHeartCount] = useState(0);
 
   const handleGeneratePoem = () => {
     setPoem(lovePoems[Math.floor(Math.random() * lovePoems.length)]);
   };
+
+  const handleHeartCount = () => {
+    setHeartCount(heartCount + 1);
+  };
+
   return (
     <>
       <div
@@ -18,16 +24,32 @@ export default function Overview() {
           Valentine&apos;s day
         </h1>
       </div>
-      <div className="col-8 mx-auto text-center py-3">
+
+      <div className="col-8 mx-auto text-center my-5">
         <button
           type="button"
-          className="btn btn-sm btn-white btn-shrink rounded-pill border border-3 p-5 text-dm fw-bold"
+          className="btn btn-sm btn-white btn-shrink rounded text-dm fw-bold shadow-sm"
+          style={{ fontSize: "13px" }}
+          onClick={handleHeartCount}
+        >
+          ❤️
+        </button>
+        <button
+          type="button"
+          className="btn btn-sm btn-white btn-shrink rounded text-dm fw-bold shadow-sm mx-2"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           onClick={handleGeneratePoem}
           style={{ fontSize: "13px" }}
         >
-          some random poems which you know i made for you, ily!
+          poems, ily!
+        </button>
+        <button
+          type="button"
+          className="btn btn-sm btn-white btn-shrink rounded text-dm fw-bold shadow-sm"
+          style={{ fontSize: "13px" }}
+        >
+          {heartCount}
         </button>
       </div>
       <div className="container-fluid text-dm text-center col-8 mx-auto">
